@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asadaboomtham.stmdefectapplication.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+        <!-- ################   Login Layout ################# -->
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+
+            <!-- ################   Username Entry ################# -->
+
+
+            <LinearLayout
+                android:id="@+id/usernameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- ################  Username Icon ################# -->
+
+                <!-- ################ Username EditText ################# -->
+                <EditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="50dp" />
+
+                <!-- ################  Close Username Entry ################# -->
+            </LinearLayout>
+
+            <!-- ################   Password Entry ################# -->
+            <LinearLayout
+                android:id="@+id/passwordView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <!-- ################  Password EditText ################# -->
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:paddingLeft="16dp" />
+
+
+                <!-- ################   Close Password Entry ################# -->
+            </LinearLayout>
+
+
+            <!-- ################  Login Button ################# -->
+            <LinearLayout
+                android:id="@+id/signinView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- ################  Login Button ################# -->
+                <Button
+                    android:background="#01579B"
+                    android:id="@+id/btnLogin"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="LOG IN"
+                    android:textColor="#fff" />
+
+
+                <!-- ################   Close Login Button ################# -->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
