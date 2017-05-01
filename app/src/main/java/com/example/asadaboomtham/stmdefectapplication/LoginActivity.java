@@ -34,45 +34,47 @@ public class LoginActivity extends AppCompatActivity {
 
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final Button btnLogin = (Button)findViewById(R.id.btnLogin);
+        final Button btnLogin = (Button) findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Username = etUsername.getText().toString();
                 String Password = etPassword.getText().toString();
-                service.sendData(Username,Password).enqueue(new Callback<SendQuick>() {
+                service.sendData(Username, Password).enqueue(new Callback<SendQuick>() {
                     @Override
                     public void onResponse(Call<SendQuick> call, Response<SendQuick> response) {
                         CharSequence text_result = response.body().result;
-                        final int  chk = Integer.parseInt(text_result.toString());
+                        final int chk = Integer.parseInt(text_result.toString());
                         int duration = Toast.LENGTH_SHORT;
                         //Toast toast = Toast.makeText(context, text, duration);
                         //toast.show();
 
-                        if(chk==1){
-                            Toast toast = Toast.makeText(getApplicationContext(),"LOGIN SUCCESS",Toast.LENGTH_SHORT);
+                        if (chk == 1) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "LOGIN SUCCESS", Toast.LENGTH_SHORT);
                             toast.show();
 
-                            Intent intent = new Intent(LoginActivity.this,ProjectActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, ProjectActivity.class);
                             LoginActivity.this.startActivity(intent);
 
-                        }
-                        else{
+                        } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             builder.setMessage("LOGIN FAIL")
-                                    .setNegativeButton("Retry",null)
+                                    .setNegativeButton("Retry", null)
                                     .create()
                                     .show();
 
                         }
                     }
+
                     @Override
                     public void onFailure(Call<SendQuick> call, Throwable t) {
 
                     }
-                });            }
+                });
+            }
         });
 
+        getSupportActionBar().hide();
     }
 }
