@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.asadaboomtham.stmdefectapplication.DefectLogActivity">
     <LinearLayout
-        android:layout_width="368dp"
+
+        android:layout_width="match_parent"
         android:layout_height="551dp"
         android:background="#b5ecebeb"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
 
         <LinearLayout
+
             android:layout_width="350dp"
             android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="15dp"
             android:background="#ffffff"
             android:orientation="horizontal">
 
@@ -154,4 +159,4 @@
 
 
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
