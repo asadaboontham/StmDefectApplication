@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StmDefectApplication</string>
+    <string name="app_name">รายการข้อบกพร่อง</string>
     <string name="login_button">login</string>
     <string name="login_username_hint">Username</string>
     <string name="login_password_hint">Password</string>
