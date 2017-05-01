@@ -47,7 +47,7 @@
 
                 <!-- ################ Username EditText ################# -->
                 <EditText
-                    android:id="@+id/editTextUsername"
+                    android:id="@+id/etUsername"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/login_username_hint"
@@ -59,7 +59,7 @@
 
             <!-- ################   Password Entry ################# -->
             <LinearLayout
-                android:id="@+id/passwordView"
+                android:id="@+id/Password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp"
@@ -70,11 +70,12 @@
 
                 <!-- ################  Password EditText ################# -->
                 <EditText
-                    android:inputType="textPassword"
-                    android:id="@+id/editTextPassword"
+
+                    android:id="@+id/etPassword"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/login_password_hint"
+                    android:inputType="textPassword"
                     android:paddingLeft="16dp" />
 
 
@@ -92,10 +93,10 @@
 
                 <!-- ################  Login Button ################# -->
                 <Button
-                    android:background="#01579B"
                     android:id="@+id/btnLogin"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:background="#01579B"
                     android:text="@string/login_button"
                     android:textColor="#fff" />
 

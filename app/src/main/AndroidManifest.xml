@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asadaboomtham.stmdefectapplication">
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +20,7 @@
         <activity android:name=".ProjectDetailActivity" />
         <activity android:name=".DefectLogActivity" />
         <activity android:name=".DefectLogDetailActivity" />
-        <activity android:name=".DefectLogEditActivity"></activity>
+        <activity android:name=".DefectLogEditActivity" />
     </application>
 
 </manifest>
