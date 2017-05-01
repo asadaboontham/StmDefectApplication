@@ -65,7 +65,6 @@ public class LoginActivity extends AppCompatActivity {
                                     .create()
                                     .show();
 
-
                         }
                     }
                     @Override
