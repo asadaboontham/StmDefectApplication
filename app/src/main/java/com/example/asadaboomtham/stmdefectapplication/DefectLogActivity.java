@@ -17,4 +17,6 @@ public class DefectLogActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main,menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }
