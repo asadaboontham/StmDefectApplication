@@ -42,10 +42,36 @@ public class ProjectActivity extends AppCompatActivity {
     private ArrayList<String> data1;
     private ProgressDialog progressDialog;
 
+    //private PROJECTService service;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
+
+
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.51.4.17/TSP57/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        service = retrofit.create(ProjectService.class);
+//        service.getOPPMSData().enqueue(new Callback<OPPMSDAO>() {
+//            @Override
+//            public void onResponse(Call<OPPMSDAO> call, Response<OPPMSDAO> response) {
+//                for (int i=0 ;i<response.body().defect.size();i++){
+//                    Log.d("RESPONSE :: ",response.body().defect.get(i).pj_name);
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<OPPMSDAO> call, Throwable t) {
+//
+//            }
+//        });
+//
+//    }
+
+        //jsonlistView = (ListView) findViewById(R.id.ProjectListview);
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://10.51.4.17")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -65,16 +91,18 @@ public class ProjectActivity extends AppCompatActivity {
                 ArrayList<String> data1 = new ArrayList<>();
                 ArrayList<String> data2 = new ArrayList<>();
                 ArrayList<String> data3 = new ArrayList<>();
+                ArrayList<String> data4 = new ArrayList<>();
 
                 for(int i=0; i<response.body().getDefect().size(); i++){
                     data.add(response.body().getDefect().get(i).getPjName());
                     data1.add(response.body().getDefect().get(i).getPjCode());
                     data2.add(response.body().getDefect().get(i).getPjStartDate());
                     data3.add(response.body().getDefect().get(i).getPjId());
+
+                    data4.add(response.body().getDefect().get(i).getPjPstId());
                 }
 
-                listview.setAdapter(new ProjectListView(getApplicationContext(), data,data1,data2,data3));
-                // listview.setAdapter(new ProjectListView(getApplicationContext(), data1));
+                listview.setAdapter(new ProjectListView(getApplicationContext(), data,data1,data2,data3,data4));
 
             }
 
@@ -166,4 +194,56 @@ public class ProjectActivity extends AppCompatActivity {
             }
         }.execute();
     }
+//
+
+
+//    public class EfficientAdapter extends BaseAdapter{
+//
+//        public  Context mContext;
+//        public LayoutInflater mInflater;
+//        public EfficientAdapter(Context context, ArrayList<String> data){
+//            mContext = context;
+//            mInflater = LayoutInflater.from(mContext);
+//        }
+//
+//        @Override
+//        public int getCount() {
+//            return 20;
+//        }
+//
+//        @Override
+//        public Object getItem(int position) {
+//            return null;
+//        }
+//
+//        @Override
+//        public long getItemId(int position) {
+//            return 0;
+//        }
+//
+//        @Override
+//        public View getView(int position, View convertView, ViewGroup parent) {
+//
+//            ViewHolder holder = null;
+//            if (convertView == null){
+//                //load layout
+//                convertView = mInflater.inflate(R.layout.project_list_layout,null);
+//                holder = new ViewHolder();
+//                holder.title1 = (TextView) convertView.findViewById(R.id.ProjectNameListview);
+//                holder.title2 = (TextView) convertView.findViewById(R.id.ProjectIDListview);
+//                holder.title3 = (TextView) convertView.findViewById(R.id.ProjectDayListview);
+//                convertView.setTag(holder);
+//            }else {
+//                //rebind widget
+//                holder = (ViewHolder) convertView.getTag();
+//            }
+//
+//         //   holder.title1.setText(String.valueOf(position)+". CodeMobies");
+//            return convertView;
+//        }
+//    }
+//        public class ViewHolder{
+//            TextView title1,title2,title3;
+//        }
+
 }

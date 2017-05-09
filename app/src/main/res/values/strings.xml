@@ -3,5 +3,7 @@
     <string name="login_button">login</string>
     <string name="login_username_hint">Username</string>
     <string name="login_password_hint">Password</string>
+    <string name="action_defectlog">Defect Log</string>
+    <string name="action_testreport">Test Report</string>
 
 </resources>

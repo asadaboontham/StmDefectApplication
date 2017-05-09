@@ -1,6 +1,7 @@
 package com.example.asadaboomtham.stmdefectapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,21 +34,21 @@ public class ProjectListView extends BaseAdapter {
     private final ArrayList<String> data1;
     private final ArrayList<String> data2;
     private final ArrayList<String> data3;
+    private final ArrayList<String> data4;
 
-    public Context mContext;
+    public  Context mContext;
     public LayoutInflater mInflater;
 
 
 
-    public ProjectListView(Context context, ArrayList<String> data,ArrayList<String> data1,ArrayList<String> data2,ArrayList<String> data3){
+    public ProjectListView(Context context, ArrayList<String> data,ArrayList<String> data1,ArrayList<String> data2,ArrayList<String> data3,ArrayList<String> data4){
         mContext = context;
         mInflater = LayoutInflater.from(mContext);
         this.data = data;
         this.data1 = data1;
         this.data2 = data2;
         this.data3 = data3;
-
-
+        this.data4 = data4;
     }
 
 
@@ -74,6 +75,7 @@ public class ProjectListView extends BaseAdapter {
         //load layout
         View v = mInflater.inflate(R.layout.project_list_layout, null);
 
+
 //        TextView ProjectName = (TextView) v.findViewById(R.id.ProjectNameListview);
 //        TextView ProjectCode = (TextView) v.findViewById(R.id.ProjectIDListview);
 //        TextView ProjectDay = (TextView) v.findViewById(R.id.ProjectDayListview);
@@ -96,9 +98,7 @@ public class ProjectListView extends BaseAdapter {
                 .build();
 
         service = retrofit.create(ProjectService.class);
-
-
-
+        LinearLayout kk =(LinearLayout) v.findViewById(R.id.ppjlinear);
         TextView aa = (TextView) v.findViewById(R.id.ProjectNameListview);
         aa.setText(data.get(position));
 
@@ -109,28 +109,39 @@ public class ProjectListView extends BaseAdapter {
         gg.setText(data2.get(position));
 
 
-        aa.setOnClickListener(new View.OnClickListener() {
+
+        kk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("aa",data3.get(position));
+
+                Intent intent = new Intent(v.getContext(), ProjectDetailActivity.class);
+                intent.putExtra("project", data1.get(position));
+                intent.putExtra("name", data.get(position));
+                intent.putExtra("pst", data4.get(position));
+                mContext.startActivity(intent);
+
+                Log.d("xxx",data3.get(position));
+
                 //ไปดู start activity
-                //      Intent intent = new Intent(MainActivity.this.)
-                String pj_id = data3.get(position);
 
-                service.select_defect(pj_id).enqueue(new Callback<SelectDefect>() {
-                    @Override
-                    public void onResponse(Call<SelectDefect> call, Response<SelectDefect> response) {
-                        for(int i=0; i<response.body().getSelectDefect().size(); i++){
-                            Log.d("pun",response.body().getSelectDefect().get(i).getDfCode());
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<SelectDefect> call, Throwable t) {
-
-                    }
-                });
+//                String pj_id = data3.get(position);
+//
+//                service.select_defect(pj_id).enqueue(new Callback<SelectDefect>() {
+//                    @Override
+//                    public void onResponse(Call<SelectDefect> call, Response<SelectDefect> response) {
+//                        for(int i=0; i<response.body().getSelectDefect().size(); i++){
+//                            Log.d("pun",response.body().getSelectDefect().get(i).getDfCode());
+//                        }
+//
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<SelectDefect> call, Throwable t) {
+//
+//                    }
+//                });
 
             }
         });
@@ -150,8 +161,4 @@ public class ProjectListView extends BaseAdapter {
 
         return v;
     }
-
-//    public class ViewHolder{
-//        TextView title1,title2,title3;
-//    }
 }
