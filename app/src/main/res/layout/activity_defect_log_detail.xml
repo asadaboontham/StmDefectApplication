@@ -40,7 +40,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/A"
+                        android:id="@+id/df_code"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
@@ -114,7 +114,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/C"
+                        android:id="@+id/df_dft_id"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
@@ -152,12 +152,51 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/D"
+                        android:id="@+id/df_sv_id"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:text="สูง"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="ความสำคัญ"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/df_pr_id"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="ต่ำ"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
@@ -192,7 +231,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/F"
+                        android:id="@+id/df_fixed_person"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
@@ -230,7 +269,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/G"
+                        android:id="@+id/df_module"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
@@ -240,11 +279,8 @@
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
-
-
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
@@ -270,7 +306,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/H"
+                        android:id="@+id/df_step"
                         android:layout_width="300dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
@@ -283,29 +319,40 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:background="#ffffff"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="300dp"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:text="พาร์ธที่เข้าถึง"
-                    android:textColor="#000"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/P"
-                    android:layout_width="300dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="www.gogole.com "
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="พาร์ธที่เข้าถึง"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/df_reference"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="www.gogole.com"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </LinearLayout>
 

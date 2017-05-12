@@ -46,60 +46,86 @@ public class DefectLogActivity extends AppCompatActivity {
             public void onResponse(Call<SelectDefect> call, Response<SelectDefect> response) {
                 listview = (ListView) findViewById(R.id.DefectListview);
 
-                ArrayList<String> data = new ArrayList<>();
-                ArrayList<String> data1 = new ArrayList<>();
-                String dfs_id;
+                ArrayList<String> df_code = new ArrayList<>();
+                ArrayList<String> dfs_id = new ArrayList<>();
+                ArrayList<String> df_description = new ArrayList<>();
+                ArrayList<String> df_dft_id = new ArrayList<>();
+                ArrayList<String> df_sv_id = new ArrayList<>();
+                ArrayList<String> df_pr_id = new ArrayList<>();
+                ArrayList<String> df_fixed_person = new ArrayList<>();
+                ArrayList<String> df_module = new ArrayList<>();
+                ArrayList<String> df_step = new ArrayList<>();
+                ArrayList<String> df_reference = new ArrayList<>();
+                String data;
 
                 for(int i=0; i<response.body().getSelectDefect().size(); i++){
-                    data.add(response.body().getSelectDefect().get(i).getDfCode());
 
                     if (response.body().getSelectDefect().get(i).getDfDfsId().equals("1")) {
-                        dfs_id = "สถานะ : พบข้อบกพร่อง";
+                        data = "สถานะ : พบข้อบกพร่อง";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("2")){
-                        dfs_id = "สถานะ : แจ้งผู้พัฒนา";
+                        data = "สถานะ : แจ้งผู้พัฒนา";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("3")){
-                        dfs_id = "สถานะ : กำลังดำเนินการ";
+                        data = "สถานะ : กำลังดำเนินการ";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("4")){
-                        dfs_id = "สถานะ : แจ้งซ้ำ";
+                        data = "สถานะ : แจ้งซ้ำ";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("5")){
-                        dfs_id = "สถานะ : ไม่ใช่ข้อบกพร่อง";
+                        data = "สถานะ : ไม่ใช่ข้อบกพร่อง";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("6")){
-                        dfs_id = "สถานะ : ยังไม่ต้องแก้ไข";
+                        data = "สถานะ : ยังไม่ต้องแก้ไข";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("7")){
-                        dfs_id = "สถานะ : ไม่ส่งผลต่อระบบ";
+                        data = "สถานะ : ไม่ส่งผลต่อระบบ";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("8")){
-                        dfs_id = "สถานะ : แก้ไขแล้ว";
+                        data = "สถานะ : แก้ไขแล้ว";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("9")){
-                        dfs_id = "สถานะ : ต้องการทดสอบใหม่";
+                        data = "สถานะ : ต้องการทดสอบใหม่";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("10")){
-                        dfs_id = "สถานะ : กำลังทดสอบใหม่";
+                        data = "สถานะ : กำลังทดสอบใหม่";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("11")){
-                        dfs_id = "สถานะ : แจ้งผู้พัฒนาอีกครั้ง";
+                        data = "สถานะ : แจ้งผู้พัฒนาอีกครั้ง";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("12")){
-                        dfs_id = "สถานะ : ยืนยันแล้ว";
+                        data = "สถานะ : ยืนยันแล้ว";
                     }
                     else if(response.body().getSelectDefect().get(i).getDfDfsId().equals("13")){
-                        dfs_id = "สถานะ : ปิดข้อบกพร่อง";
+                        data = "สถานะ : ปิดข้อบกพร่อง";
                     }
                     else{
-                        dfs_id = "สถานะ : ยังไม่ดำเนินการ";
+                        data = "สถานะ : ยังไม่ดำเนินการ";
                     }
 
-                    data1.add(dfs_id);
+                    df_code.add(response.body().getSelectDefect().get(i).getDfCode());
+                    dfs_id.add(data);
+                    df_description.add(response.body().getSelectDefect().get(i).getDfCode());
+                    df_dft_id.add(response.body().getSelectDefect().get(i).getDfDftId());
+                    df_sv_id.add(response.body().getSelectDefect().get(i).getDfSvId());
+                    df_pr_id.add(response.body().getSelectDefect().get(i).getDfPrId());
+                    df_fixed_person.add(response.body().getSelectDefect().get(i).getDfFixedPerson());
+                    df_module.add(response.body().getSelectDefect().get(i).getDfModule());
+                    df_step.add(response.body().getSelectDefect().get(i).getDfStep());
+                    df_reference.add(response.body().getSelectDefect().get(i).getDfReference());
                 }
 
-                listview.setAdapter(new DefectListView(getApplicationContext(), data, data1));
+                listview.setAdapter(new DefectListView(getApplicationContext(),
+                        df_code,
+                        dfs_id,
+                        df_description,
+                        df_dft_id,
+                        df_sv_id,
+                        df_pr_id,
+                        df_fixed_person,
+                        df_module,
+                        df_step,
+                        df_reference));
             }
 
             @Override

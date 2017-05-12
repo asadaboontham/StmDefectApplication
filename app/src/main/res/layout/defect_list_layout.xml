@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/ppjlinear"
+            android:id="@+id/dflinear"
             android:layout_width="350dp"
             android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
