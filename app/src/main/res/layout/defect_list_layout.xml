@@ -25,34 +25,26 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/ProjectNameListview"
+                    android:id="@+id/df_id"
                     android:layout_width="300dp"
                     android:layout_height="22dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="7dp"
-                    android:text="โครงการพัฒนาตนเอง"
+                    android:text="DF-514"
                     android:textColor="#000"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/ProjectIDListview"
+                    android:id="@+id/df_dfs_id"
                     android:layout_width="300dp"
-                    android:layout_height="20dp"
+                    android:layout_height="22dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="(T-514)"
-                    android:textSize="16dp"
+                    android:layout_marginTop="7dp"
+                    android:text="สถานะ:กำลังทดสอบใหม่"
+                    android:textColor="#000"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ProjectDayListview"
-                    android:layout_width="300dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="17 มีนาคม 2560"
-                    android:textSize="16dp" />
 
             </LinearLayout>
 
@@ -71,3 +63,5 @@
 
 
 </LinearLayout>
+
+

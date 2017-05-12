@@ -18,5 +18,5 @@ public interface ProjectService {
 
     @FormUrlEncoded
     @POST("/TSP57/ISERL/application/views/stm/defect_log/android/select_defect.php")
-    Call<SelectDefect> select_defect(@Field("pj_id")String pj_id);
+    Call<SelectDefect> select_defect(@Field("pj_id") String pj_id);
 }

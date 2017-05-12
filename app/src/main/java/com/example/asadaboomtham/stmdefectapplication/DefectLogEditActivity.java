@@ -1,7 +1,7 @@
 package com.example.asadaboomtham.stmdefectapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class DefectLogEditActivity extends AppCompatActivity {
 

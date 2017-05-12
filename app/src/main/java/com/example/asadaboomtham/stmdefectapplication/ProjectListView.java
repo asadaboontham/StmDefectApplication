@@ -10,15 +10,11 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.asadaboomtham.stmdefectapplication.ProjectDao.SelectDefect;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -70,23 +66,7 @@ public class ProjectListView extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-//        ViewHolder holder = null;
-//        if (convertView == null){
-        //load layout
         View v = mInflater.inflate(R.layout.project_list_layout, null);
-
-
-//        TextView ProjectName = (TextView) v.findViewById(R.id.ProjectNameListview);
-//        TextView ProjectCode = (TextView) v.findViewById(R.id.ProjectIDListview);
-//        TextView ProjectDay = (TextView) v.findViewById(R.id.ProjectDayListview);
-////        TextView
-//        ProjectName.setText(data.get(position));
-//        ProjectCode.setText(data.get(position));
-//        ProjectDay.setText(data.get(position));
-
-
-        //LinearLayout ll = (LinearLayout) v.findViewById(R.id.ppjlinear);
-        // ll.setText(data.get(position));
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -118,46 +98,16 @@ public class ProjectListView extends BaseAdapter {
                 intent.putExtra("project", data1.get(position));
                 intent.putExtra("name", data.get(position));
                 intent.putExtra("pst", data4.get(position));
+                intent.putExtra("pj_id", data3.get(position));
                 mContext.startActivity(intent);
 
                 Log.d("xxx",data3.get(position));
 
                 //ไปดู start activity
 
-//                String pj_id = data3.get(position);
-//
-//                service.select_defect(pj_id).enqueue(new Callback<SelectDefect>() {
-//                    @Override
-//                    public void onResponse(Call<SelectDefect> call, Response<SelectDefect> response) {
-//                        for(int i=0; i<response.body().getSelectDefect().size(); i++){
-//                            Log.d("pun",response.body().getSelectDefect().get(i).getDfCode());
-//                        }
-//
-//
-//
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<SelectDefect> call, Throwable t) {
-//
-//                    }
-//                });
-
             }
         });
 
-
-
-
-//            holder = new ViewHolder();
-//            holder.title1 = (TextView) convertView.findViewById(R.id.ProjectNameListview);
-//            holder.title2 = (TextView) convertView.findViewById(R.id.ProjectIDListview);
-//            holder.title3 = (TextView) convertView.findViewById(R.id.ProjectDayListview);
-//            convertView.setTag(holder);
-//        }else {
-//            //rebind widget
-//            holder = (ViewHolder) convertView.getTag();
-//        }
 
         return v;
     }

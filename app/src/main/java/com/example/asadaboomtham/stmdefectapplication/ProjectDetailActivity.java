@@ -1,8 +1,10 @@
 package com.example.asadaboomtham.stmdefectapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class ProjectDetailActivity extends AppCompatActivity {
@@ -41,5 +43,20 @@ public class ProjectDetailActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main,menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_defectlog:
+                String pj_id = getIntent().getStringExtra("pj_id");
+                //    Log.d("menu", "Complete");
+                Intent intent = new Intent(this, DefectLogActivity.class);
+                intent.putExtra("pj_id", pj_id);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
