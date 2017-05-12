@@ -8,4 +8,9 @@
     <item android:id="@+id/action_testreport"
         android:title="@string/action_testreport"
         ></item>
+
+    <item android:id="@+id/action_edit"
+        android:icon="@drawable/ic_mode_edit_black_24dp"
+        android:title="editt"
+        app:showAsAction="always"/>
 </menu>
