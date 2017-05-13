@@ -1,9 +1,16 @@
 <resources>
-    <string name="app_name">รายการข้อบกพร่อง</string>
+    <string name="app_name">โครงการทดสอบ</string>
     <string name="login_button">login</string>
     <string name="login_username_hint">Username</string>
     <string name="login_password_hint">Password</string>
     <string name="action_defectlog">Defect Log</string>
     <string name="action_testreport">Test Report</string>
+    <string name="Project">โครงการทดสอบ</string>
+    <string name="Project_detail">รายละเอียดโครงการทดสอบ</string>
+    <string name="Defectlog">รายการข้อบกพร่อง</string>
+    <string name="Defectlog_detail">รายละเอียดรายการข้อบกพร่อง</string>
+    <string name="Defectlog_edit">แก้ไชรายละเอียดรายการข้อบกพร่อง</string>
+    <string name="Defectlog_Description">คำอธิบายขั้นตอนการพบ</string>
+    <string name="Defectlog_list">รายการข้อบกพร่อง</string>
 
 </resources>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.asadaboomtham.stmdefectapplication">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,11 +18,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProjectActivity" />
-        <activity android:name=".ProjectDetailActivity" />
-        <activity android:name=".DefectLogActivity" />
-        <activity android:name=".DefectLogDetailActivity" />
-        <activity android:name=".DefectLogEditActivity" />
+        <activity
+            android:name=".ProjectActivity"
+            android:label="@string/Project" />
+        <activity
+            android:name=".ProjectDetailActivity"
+            android:label="@string/Project_detail" />
+        <activity
+            android:name=".DefectLogActivity"
+            android:label="@string/Defectlog" />
+        <activity
+            android:name=".DefectLogDetailActivity"
+            android:label="@string/Defectlog_detail" />
+        <activity
+            android:name=".DefectLogEditActivity"
+            android:label="@string/Defectlog_edit" />
+        <activity
+            android:name=".Defect_log_DescriptionActivity"
+            android:label="@string/Defectlog_Description" />
+        <activity android:name=".Defet_log_list_Activity" android:label="@string/Defectlog_list"></activity>
     </application>
 
 </manifest>
