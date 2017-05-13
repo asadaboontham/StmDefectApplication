@@ -105,7 +105,7 @@ public class DefectLogActivity extends AppCompatActivity {
 
                     df_code.add(response.body().getSelectDefect().get(i).getDfCode());
                     dfs_id.add(data);
-                    df_description.add(response.body().getSelectDefect().get(i).getDfCode());
+                    df_description.add(response.body().getSelectDefect().get(i).getDfDescription());
                     df_dft_id.add(response.body().getSelectDefect().get(i).getDfDftId());
                     df_sv_id.add(response.body().getSelectDefect().get(i).getDfSvId());
                     df_pr_id.add(response.body().getSelectDefect().get(i).getDfPrId());

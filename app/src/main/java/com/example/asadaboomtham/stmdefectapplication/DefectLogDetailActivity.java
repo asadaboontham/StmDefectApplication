@@ -1,13 +1,16 @@
 package com.example.asadaboomtham.stmdefectapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class DefectLogDetailActivity extends AppCompatActivity {
 
+    private String description;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,7 @@ public class DefectLogDetailActivity extends AppCompatActivity {
         String df_module = getIntent().getStringExtra("df_module");
         String df_step = getIntent().getStringExtra("df_step");
         String df_reference = getIntent().getStringExtra("df_reference");
+        description = df_description;
 
         TextView aa = (TextView) findViewById(R.id.df_code);
         aa.setText(df_code);
@@ -102,6 +106,18 @@ public class DefectLogDetailActivity extends AppCompatActivity {
 
         TextView ii = (TextView) findViewById(R.id.df_reference);
         ii.setText(df_reference);
+
+        LinearLayout zz =(LinearLayout) findViewById(R.id.df_description);
+        zz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), Defect_log_DescriptionActivity.class);
+                intent.putExtra("df_description", description);
+                startActivity(intent);
+
+            }
+        });
 
     }
 }
