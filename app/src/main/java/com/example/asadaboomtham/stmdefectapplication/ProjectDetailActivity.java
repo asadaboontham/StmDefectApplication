@@ -56,6 +56,12 @@ public class ProjectDetailActivity extends AppCompatActivity {
                 intent.putExtra("pj_id", pj_id);
                 startActivity(intent);
                 return true;
+            case R.id.action_testreport:
+                String pj_id1 = getIntent().getStringExtra("pj_id");
+                Intent intent1 = new Intent(this, MainFragment.class);
+                intent1.putExtra("pj_id", pj_id1);
+                startActivity(intent1);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

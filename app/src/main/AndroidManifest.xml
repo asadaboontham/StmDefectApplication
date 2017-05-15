@@ -37,6 +37,16 @@
             android:name=".Defect_log_DescriptionActivity"
             android:label="@string/Defectlog_Description" />
         <activity android:name=".Defet_log_list_Activity" android:label="@string/Defectlog_list"></activity>
+        <activity
+            android:name=".MainFragment"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

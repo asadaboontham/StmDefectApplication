@@ -12,5 +12,9 @@
     <string name="Defectlog_edit">แก้ไชรายละเอียดรายการข้อบกพร่อง</string>
     <string name="Defectlog_Description">คำอธิบายขั้นตอนการพบ</string>
     <string name="Defectlog_list">รายการข้อบกพร่อง</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
