@@ -45,7 +45,7 @@
                     android:layout_marginTop="10dp"
                     android:text="stm-123"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
         </LinearLayout>
 
@@ -81,7 +81,7 @@
                     android:layout_marginTop="10dp"
                     android:text="โครงการพัฒนาตนเอง"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
             </LinearLayout>
 
@@ -119,7 +119,7 @@
                     android:layout_marginTop="10dp"
                     android:text="กำลังดำเนินการ"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
             </LinearLayout>
 

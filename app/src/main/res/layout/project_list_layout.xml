@@ -2,74 +2,83 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEE"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="#E0E0E0">
 
         <LinearLayout
-            android:id="@+id/ppjlinear"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="7dp"
-            android:background="#fff"
-            android:orientation="horizontal">
+            android:layout_height="85dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/ppjlinear"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="7dp"
+                android:background="#fff"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/ProjectNameListview"
-                    android:layout_width="300dp"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:text="โครงการพัฒนาตนเอง"
-                    android:textColor="#000"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/defect" />
 
-                <TextView
-                    android:id="@+id/ProjectIDListview"
-                    android:layout_width="300dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="(T-514)"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/ProjectDayListview"
-                    android:layout_width="300dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:text="17 มีนาคม 2560"
-                    android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/ProjectNameListview"
+                        android:layout_width="300dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="โครงการพัฒนาตนเอง"
+                        android:textColor="#000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ProjectIDListview"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="(T-514)"
+                        android:textSize="16dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/ProjectDayListview"
+                        android:layout_width="300dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="17 มีนาคม 2560"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="25dp"
-                android:text=">"
-                android:textSize="30dp" />
 
         </LinearLayout>
-
-
     </LinearLayout>
 
 
