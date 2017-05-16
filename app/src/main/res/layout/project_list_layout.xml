@@ -20,8 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
                 android:layout_marginTop="7dp"
                 android:background="#fff"
                 android:orientation="horizontal">
@@ -49,7 +49,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:text="โครงการพัฒนาตนเอง"
-                        android:textColor="#000"
+                        android:textColor="@color/colorAccesess"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -69,6 +69,7 @@
                         android:layout_height="20dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="3dp"
+
                         android:text="17 มีนาคม 2560"
                         android:textSize="16dp" />
 

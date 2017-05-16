@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="1dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -86,8 +86,9 @@
             <!-- ################  Login Button ################# -->
             <LinearLayout
                 android:id="@+id/signinView"
+                android:layout_marginTop="-10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="38dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 

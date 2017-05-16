@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/StmDefectApplication.iml" filepath="$PROJECT_DIR$/StmDefectApplication.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StmDefectApplication-master.iml" filepath="$PROJECT_DIR$/StmDefectApplication-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

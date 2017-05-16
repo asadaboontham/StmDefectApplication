@@ -2,67 +2,90 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b5ecebeb"
+    android:background="#E0E0E0"
     android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="#E0E0E0">
 
         <LinearLayout
-            android:id="@+id/dflinear"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="7dp"
-            android:background="#fcfcfc"
-            android:orientation="horizontal">
+            android:layout_height="85dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:id="@+id/dflinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:background="#fcfcfc"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/log" />
+
+                <LinearLayout
+                    android:layout_width="240dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/df_id"
+                        android:layout_width="300dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="DF-514"
+                        android:textColor="@color/colorAccesess"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/df_dfs_id"
+                        android:layout_width="300dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="สถานะ : กำลังทดสอบใหม่"
+                        android:textColor="@color/colorAccesess"
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
 
                 <TextView
-                    android:id="@+id/df_id"
-                    android:layout_width="300dp"
-                    android:layout_height="22dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:text="DF-514"
-                    android:textColor="#000"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/df_dfs_id"
-                    android:layout_width="300dp"
-                    android:layout_height="22dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="7dp"
-                    android:text="สถานะ : กำลังทดสอบใหม่"
-                    android:textColor="#000"
-                    android:textSize="18dp"
-                    android:textStyle="normal" />
-
+                    android:layout_marginTop="20dp"
+                    android:text=">"
+                    android:textSize="30dp"
+                    android:textColor="@color/colorAccesess"/>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text=">"
-                android:textSize="30dp" />
 
         </LinearLayout>
-
-
     </LinearLayout>
 
 
 </RelativeLayout>
+
+
 
 
